@@ -9,6 +9,6 @@ MIT license for code and media
 ### Dependencies
 - Default
 
-### Todo
+### TODO
 - Lumps for smelting
 - Extended functionality
