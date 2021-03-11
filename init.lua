@@ -34,11 +34,7 @@ minetest.register_node("legendary_ore:legendary_ore", {
 	groups = {cracky = 6},
 	sounds = default_stone_sounds,
         light_source = 7,
-	if minetest.get_modpath("legendary_armor") then
-		drop = "legendary_armor:ingot",
-	else
-		drop = "legendary_ore:legendary_ore"
-	end
+	drop = "legendary_armor:ingot",
 })
 
 
