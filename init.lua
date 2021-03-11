@@ -15,7 +15,7 @@ minetest.register_node("legendary_ore:legendary_block", {
     tiles = {"legendary_ore_block.png"},
     light_source = 7,
     is_ground_content = true,
-    groups = {cracky=6}
+    groups = {cracky=3}
 })
 
 minetest.register_craft({
@@ -31,7 +31,7 @@ minetest.register_craft({
 minetest.register_node("legendary_ore:legendary_ore", {
 	description = S("Legendary ore"),
 	tiles = {"default_stone.png^legendary_ore_ore.png"},
-	groups = {cracky = 6},
+	groups = {cracky = 3},
 	sounds = default_stone_sounds,
         light_source = 7,
 	drop = "legendary_armor:ingot",
