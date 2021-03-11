@@ -1,5 +1,13 @@
-This mod adds legendary ores and blocks
+#Legendary_ORE
 
+Adds Legendary ores and blocks
 
-TODO: add lumps to smelt for ingots, extended support, more functionality
- 
+It is licensed under an MIT license
+
+Dependencies: Default
+
+This is currently version 1.0 of this mod
+
+To install, go to https://github.com/gitgithu/legendary_ore
+
+TODO: add lumps to smelt, extend functionality
