@@ -1,4 +1,4 @@
-#Legendary_ORE
+# Legendary_ORE
 
 Adds Legendary ores and blocks
 
