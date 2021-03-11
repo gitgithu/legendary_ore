@@ -11,7 +11,7 @@ end
 --block definitions and recipes
 
 minetest.register_node("legendary_ore:legendary_block", {
-    description = S("A legendary bloc"),
+    description = S("Legendary block"),
     tiles = {"legendary_ore_block.png"},
     light_source = 7,
     is_ground_content = true,
@@ -29,7 +29,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("legendary_ore:legendary_ore", {
-	description = S("Ore"),
+	description = S("Legendary ore"),
 	tiles = {"default_stone.png^legendary_ore_ore.png"},
 	groups = {cracky = 2},
 	sounds = default_stone_sounds,
