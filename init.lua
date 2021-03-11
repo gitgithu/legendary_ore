@@ -38,6 +38,7 @@ minetest.register_node("legendary_ore:legendary_ore", {
 		drop = "legendary_armor:ingot",
 	else
 		drop = "legendary_ore:legendary_ore"
+	end
 })
 
 
