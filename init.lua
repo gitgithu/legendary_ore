@@ -37,48 +37,17 @@ minetest.register_node("legendary_ore:legendary_ore", {
 	drop = "legendary_armor:ingot",
 })
 
---Mapgen taken from Nyan cat mod, modified a little bit
---License: https://github.com/clinew/nyancat/blob/master/license.txt
---May or may not be working, haven't gotten around to testing it yet
 
-legendaryOre = {}
+-- Mapgen 
+--Spin off of gemstones mapgen
 
-function legendaryOre.place(pos, facedir, length)
-	if facedir > 3 then
-		facedir = 0
-	end
-	local tailvec = minetest.facedir_to_dir(facedir)
-	local p = {x = pos.x, y = pos.y, z = pos.z}
-	minetest.set_node(p, {name = "legendary_ore:legendary_ore", param2 = facedir})
-	--for i = 1, length do
-	--	p.x = p.x + tailvec.x
-	--	p.z = p.z + tailvec.z
-	--	minetest.set_node(p, {name = "nyancat:nyancat_rainbow", param2 = facedir})
-	--end
-end
-
-function legendaryOre.generate(minp, maxp, seed)
-	local height_min = -31000
-	local height_max = -32
-	if maxp.y < height_min or minp.y > height_max then
-		return
-	end
-	local y_min = math.max(minp.y, height_min)
-	local y_max = math.min(maxp.y, height_max)
-	local volume = (maxp.x - minp.x + 1) * (y_max - y_min + 1) * (maxp.z - minp.z + 1)
-	local pr = PseudoRandom(seed + 9324342)
-	local max_num_ores = math.floor(volume / (16 * 16 * 16))
-	for i = 1, max_num_ores do
-		if pr:next(0, 1000) == 0 then
-			local x0 = pr:next(minp.x, maxp.x)
-			local y0 = pr:next(minp.y, maxp.y)
-			local z0 = pr:next(minp.z, maxp.z)
-			local p0 = {x = x0, y = y0, z = z0}
-			legendaryOre.place(p0, pr:next(0, 3), pr:next(3, 15))
-		end
-	end
-end
-
-minetest.register_on_generated(function(minp, maxp, seed)
-	legendaryOre.generate(minp, maxp, seed)
-end)
+      minetest.register_ore({
+	          ore_type       = "scatter",
+	          ore            = "legendary_ore:legendary_ore",
+	          wherein        = "default:stone",
+	          clust_scarcity = 65 * 65 * 65,
+	          clust_num_ores = 2,
+	          clust_size     = 2,
+	          y_max          = -450,
+	          y_min          = -31000,
+	   })
